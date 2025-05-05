@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Simple Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="name">yapaka </div>
+        <nav>
+            <a onclick="goTo('about')">About</a>
+            <a onclick="goTo('skills')">Skills</a>
+            <a onclick="goTo('projects')">Projects</a>
+            <a onclick="goTo('recommendations')">Recommendations</a>
+            <span style="font-size: 20px;">🏠</span>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="S__1220791.jpg" alt="profile" class="profile-img">
+        <p>NAME : YAPAKA SAMPHAMTHAMAT I am a student who is interested in web design.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">My Diary App</div>
+        <div class="project">Photo Gallery</div>
+        <div class="project">Calendar Organizer</div>
+    </section>
+
+    <section id="recommendations">
+        <h2>Recommendations</h2>
+        <div class="recommendation">เป็นคนขยันมาก!</div>
+        <div class="recommendation">เข้าใจเร็วและตั้งใจทำงาน</div>
+        <div class="recommendation">ทำงานเป็นทีมได้ดี</div>
+
+        <input type="text" id="newRec" placeholder="แนะนำเพิ่มเติม..." />
+        <button onclick="addRec()">ส่งคำแนะนำ</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
