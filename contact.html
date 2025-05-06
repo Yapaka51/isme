@@ -66,85 +66,6 @@
                 width: 500px;
             }
 
-            #right {
-                margin: 0;
-                display: flex;
-                align-items: center;
-                width: 100%;
-            }
-
-            /* Search Container */
-            .search-container {
-                position: relative;
-                display: flex;
-                align-items: center;
-                width: 100%;
-            }
-
-            #searchInput {
-                padding: 8px;
-                border-radius: 20px;
-                border: none;
-                outline: none;
-                margin-right: 0;
-                width: 100%;
-                padding-right: 90px; /* Space for buttons */
-            }
-
-            #searchInput::placeholder {
-                color: #017577;
-            }
-
-            #searchIcon {
-                position: absolute;
-                right: 130px;
-                color: #017577;
-                font-size: 14px;
-                pointer-events: none; /* Prevents the icon from interfering with input */
-            }
-
-            /* Search Button */
-            #btnSearch {
-                position: absolute;
-                right: 70px;
-                background-color: #017577;
-                color: white;
-                border: none;
-                padding: 5px 10px;
-                border-radius: 5px;
-                cursor: pointer;
-                font-size: 10px;
-            }
-
-            #btnSearch:hover {
-                background-color: #017577a8;
-            }
-
-            #btnSearch:active {
-                background-color: #009688;
-            }
-
-            /* Clear Button */
-            #btnClear {
-                position: absolute;
-                right: 15px;
-                background-color: #017577;
-                color: white;
-                border: none;
-                padding: 5px 10px;
-                border-radius: 5px;
-                cursor: pointer;
-                font-size: 10px;
-            }
-
-            #btnClear:hover {
-                background-color: #017577a8;
-            }
-
-            #btnClear:active {
-                background-color: #009688;
-            }
-
             body {
                 background-image: url("travel.jpg");
                 background-size: cover;
@@ -192,35 +113,58 @@
             #main {
                 position: fixed;
                 left: 90px; /* Adjust distance from the edge */
-                top: 67%; /* Centers it vertically */
-                transform: translateY(-93%);
+                top: 50%; /* Centers it vertically */
+                transform: translateY(-60%);
                 display: flex;
-                flex-direction: column;
                 align-items: left;
-                width: 50%;
+                width: 100%;
+                color: azure;
             }
 
             #main h1 {
                 font-size: 3rem;
                 margin-bottom: 20px;
-                color: azure;
-            }
-            #main div {
-                width: 40%;
-                color: azure;
-                margin-bottom: 50px;
+                margin-right: 50px;
             }
 
-            #main button {
-                background-color: #017577;
+            #main p {
+                color: azure;
+                position: absolute;
+                top: 150px;
+                left: 100px;
+            }
+
+            #contactForm {
+                width: 40%;
+                color: azure;
+                margin-left: 10px;
+                padding: 10px;
+                border-radius: 5px;
+                background-color: RGB(0, 0, 50, 0.4);
+            }
+
+            .input {
+                display: block;
+                width: 100%;
+                border-radius: 5px;
+                padding: 5px;
+                border: 1px solid #333;
+                background: transparent;
+                box-shadow: none;
+                outline: none;
+            }
+
+            #submitbtn {
+                background-color: RGB(0, 0, 50, 0.7);
                 color: white;
                 border: none;
-                padding: 10px 10px;
+                padding: 5px 5px;
                 border-radius: 5px;
+                margin-top: 5px;
                 cursor: pointer;
-                font-size: 12px;
+                font-size: 11px;
                 font-weight: bold;
-                width: 100px;
+                width: 100%;
             }
         </style>
     </head>
@@ -235,14 +179,6 @@
                 <li><a href="contact.html" id="contact">Contact Us</a></li>
             </ul>
             <ul class="nav-right">
-                <li id="right">
-                    <div class="search-container">
-                        <input type="text" id="searchInput" placeholder="Enter a destination or keyword">
-                        <span id="searchIcon">&#128269;</span> <!-- Search icon -->
-                        <button id="btnSearch">Search</button>
-                        <button id="btnClear">Clear</button>
-                    </div>
-                </li>
             </ul>
         </nav>
 
@@ -256,11 +192,17 @@
             </div>
         </div>
 
-        <div id="main">
-            <h1>EXPLORE DREAM DESTINATION</h1>
-            <div>It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and igintes a sense of wonder.
-            </div>
-            <button>BOOK NOW</button>
+        <div id="main"><h1>CONTACT US</h1>
+            <form id="contactForm" novalidate>
+                <label for="name">Name</label><br>
+                <input type="text" class="input" name="name" placeholder="Enter your name" required><br>
+                <label for="email">Email</label><br>
+                <input type="email" class="input" name="email" placeholder="Enter yout email" required><br>
+                <label for="message">Message</label><br>
+                <textarea class="input" name="message" rows="5" placeholder="Leave your message" required></textarea>
+                <button id="submitbtn">Submit</button>
+            </form>
+            <p>Get in touch</p>
         </div>
 
         <script src="./travel_recommendation.js"></script>
